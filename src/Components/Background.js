@@ -10,10 +10,16 @@ export default class Background extends Component {
 
   render() {
     return (
+            
+        
       <View style={styles.container}>
          <View style={styles.left}/>
-         <View style={styles.right}/> 
+         <View style={styles.right}/>
+         <View style={styles.content}>
+            {this.props.children}
+         </View>
       </View>
+      
     );
   }
 }
@@ -34,5 +40,10 @@ const styles = StyleSheet.create({
         backgroundColor: '#F6F8FF',
         height: Dimensions.get('screen').height,
         width: Dimensions.get('screen').width * 0.5
+    },
+    content: {
+        position: 'absolute',
+        height: Dimensions.get('screen').height,
+        width: Dimensions.get('screen').width,
     }
 })
