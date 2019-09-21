@@ -23,6 +23,16 @@ export default class Home extends Component {
             <Text style={styles.title}>Nike</Text>
             <Text style={styles.subtitle}>Collection</Text>
           </View>
+          <View style={styles.onTrend}>
+            <View style={styles.trendLeft}>
+              <Text style={styles.trendText}>On Trend</Text>
+            </View>
+            <View style={styles.trendRight}>
+              <Text style={{fontWeight: 'bold'}}>1/10</Text>
+              <Image style={{marginTop: 5, marginBottom: 5}} source={require('./../../assets/Bar.png')} />
+            </View>
+            
+          </View>
         </View>
       </Background>
     );
@@ -69,6 +79,26 @@ const styles = StyleSheet.create({
     color: '#02004E',
     fontWeight: '200',
     letterSpacing: 4
+  },
+  onTrend: {
+    height: '10%',
+    flexDirection: 'row',
+    paddingHorizontal: 35,
+  },
+  trendLeft: {
+    width: '50%',
+    justifyContent: 'center'
+  },
+  trendRight: {
+    width: '50%',
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+    paddingVertical: 10,
+  },
+  trendText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#02004E'
   }
 
 });
