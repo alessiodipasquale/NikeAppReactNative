@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, KeyboardAvoidingView } from "react-native";
 import Background from "../Components/Background";
 import Header from "../Components/Header";
 import { TextInput } from "react-native-gesture-handler";
@@ -13,7 +13,7 @@ export default class Home extends Component {
   render() {
     return (
       <Background>
-        <View style={styles.container}>
+        <KeyboardAvoidingView behavior="padding" style={styles.container}>
           <Header />
           <TextInput placeholderTextColor="#02004E"placeholder="Search"style={styles.textInput}></TextInput>
           <View style={styles.imageContainer}>
@@ -33,7 +33,7 @@ export default class Home extends Component {
             </View>
             
           </View>
-        </View>
+        </KeyboardAvoidingView>
       </Background>
     );
   }
